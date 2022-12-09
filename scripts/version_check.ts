@@ -2,9 +2,12 @@
 import { IncomingMessage } from 'http';
 import * as https from 'https';
 
-const updatedVersion = require('../package.json').version as string;
-const MASTER_PACKAGE_JSON_URL =
-  'https://raw.githubusercontent.com/andr-ll/cryl/master/package.json';
+const packageJson = require('../package.json');
+
+const updatedVersion = packageJson.version as string;
+const projectName = (packageJson.name as string).replace('@andr-ll/', '');
+
+const MASTER_PACKAGE_JSON_URL = `https://raw.githubusercontent.com/andr-ll/${projectName}/master/package.json`;
 
 const semanticVersions = ['major', 'minor', 'patch'];
 

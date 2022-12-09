@@ -7,4 +7,5 @@ npm i --package-lock-only
 npm run format
 npm run lint
 npm run spell
+# npm run version:check
 git add .
