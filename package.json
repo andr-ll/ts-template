@@ -29,7 +29,7 @@
     "lint:check": "eslint '**/*.ts'",
     "spell": "cspell '**/*'",
     "husky:init": "git config core.hooksPath '.husky'",
-    "version:check": "svc andr-ll ts-template master"
+    "svc": "svc andr-ll ts-template master"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
