@@ -22,32 +22,32 @@
   "scripts": {
     "start": "ts-node ./src",
     "build": "tsc",
+    "build:bin": "nph.bin",
     "types": "tsc --noEmit",
     "format": "prettier --write '**/*.{js,json,md,ts,yml,yaml}'",
     "format:check": "prettier --check '**/*.{js,json,md,ts,yml,yaml}'",
     "lint": "eslint --fix '**/*.ts'",
     "lint:check": "eslint '**/*.ts'",
     "spell": "cspell '**/*'",
-    "husky:init": "git config core.hooksPath '.husky'",
-    "svc": "svc andr-ll ts-template master"
+    "hooks": "nph.hooks",
+    "svc": "nph.svc andr-ll ts-template master"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
     "@types/node": "^17.0.23",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
-    "eslint": "^8.12.0",
     "cspell": "^6.8.1",
+    "eslint": "^8.12.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^8.0.0",
     "prettier": "^2.6.2",
     "ts-node": "^10.7.0",
-    "typescript": "^4.6.3",
-    "@andr-ll/svc": "^1.0.4"
+    "typescript": "^4.6.3"
   },
   "publishConfig": {
     "@andr-ll:registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "@andr-ll/nph": "^1.0.3"
   }
 }
